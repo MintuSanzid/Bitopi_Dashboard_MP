@@ -1,0 +1,6 @@
+E:\Dashboard_HR_GitHub\DashboardHR.Models\bin\Release\DashboardHR.Models.dll.config
+E:\Dashboard_HR_GitHub\DashboardHR.Models\bin\Release\DashboardHR.Models.dll
+E:\Dashboard_HR_GitHub\DashboardHR.Models\bin\Release\DashboardHR.Models.pdb
+E:\Dashboard_HR_GitHub\DashboardHR.Models\obj\Release\DashboardHR.Models.csprojResolveAssemblyReference.cache
+E:\Dashboard_HR_GitHub\DashboardHR.Models\obj\Release\DashboardHR.Models.dll
+E:\Dashboard_HR_GitHub\DashboardHR.Models\obj\Release\DashboardHR.Models.pdb

@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "AgileWorx";
+    Layout = "~/Views/Shared/_LayoutDashboardAW.cshtml";
+
+}
+
+<div id="wrapper">
+    <div class="w1">
+        <header id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/Dashboard/Home"><img src="~/Content/Dashboard/images/logo.png" alt="AGILE WORX"></a>
+                </div>
+                <div class="person">
+                    <a href="#" class="person-opener">
+                        <img src="#" alt="image description">
+                    </a>
+                    <div class="person-drop">
+                        <ul>
+                            <li><a href="#"><i class="icon-pen"></i> Edit Profile </a></li>
+                            @*<li><a href="#"><i class="icon-settings"></i> Settings </a></li>*@
+                            <li><a href="#"><i class="icon-alert"></i> Alerts </a></li>
+                            <li><a href="#"><i class="icon-messages"></i> Messages </a></li>
+                            <li><a href="/Account/Login"><i class="icon-log-out"></i> Log Out </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="dropdown">
+                    <li class="">
+                        <a href="/Support/Agilewiki" class="active">AgileWiki</a>
+                        <ul class="sub_menu nav"></ul>
+                    </li>
+                    <li><a href="/Support/Create">Get Support</a></li>
+                    <li>
+                        <a href="#"> <i class=""></i> Settings</a>
+                        <ul class="sub_menu nav">
+                            <li><a href="/ExtendedConfiguration/Update"> Program & Project </a></li>
+                            <li><a href="/Color/Update"> Color Configuration </a></li>
+                            <li><a href="/Configuration/Update"> Configuration </a></li>
+                            <li><a href="/FileImport/Edit/0"> <i class=""></i> Imports </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> FAQ </a></li>
+                </ul>
+            </div>
+        </header>
+        <main role="main" id="main">
+            <div class="main-chart" data-json="/Content/Dashboard/inc/dashboard-chart-project.json"></div>
+            <div class="line-chart" data-json="/Content/Dashboard/inc/timeline-chart.json"></div>
+        </main>
+    </div>
+    @*<div id="V22" ><img src="~/Content/Dashboard/sourceimages/V22_28.png" alt=""></div>*@
+    <footer id="footer">
+        <div class="f1">
+            <div class="footer-inner">
+                <div class="container">
+                    <ul class="social-network">
+                        <li><a href="https://www.youtube.com/watch?v=zkZ28JcnbN4"><i class="icon-youtube-with-circle"></i></a></li>
+                        <li><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                        <li><a href="#"><i class="icon-google"></i></a></li>
+                    </ul>
+                    <span class="copyright">© Copyright agileworx 2015</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="~/Content/Dashboard/js/jquery-1.11.2.min.js"></script>
+<script src="~/Content/Dashboard/js/jquery.main-project.js"></script>
+<script src="~/Content/Dashboard/js/d3.js"></script>
+<script src="~/Content/Dashboard/js/d3.v3.min.js"></script>

@@ -1,0 +1,322 @@
+﻿
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutConfigurationHRF.cshtml";
+}
+
+<script src="~/Scripts/angular.js"></script>
+<script type="text/javascript" src="~/Scripts/ngDialog.js"></script>
+<link href="~/Content/ngDialog.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/ngDialog.css">
+<link rel="stylesheet" href="~/Content/ngDialog-theme-default.css">
+
+<script src="~/Scripts/angular-resource.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/App/ConfigurationController.js"></script>
+
+<link href="~/Content/Configuration/css/style.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=News+Cycle:400,700" rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+
+<br />
+<div class="body-content">
+    <div class="container-dash" ng-app="app" ng-controller="ConfigurationController">
+        <br />
+        <h2 class="">
+            &nbsp; &nbsp;
+            <i class="glyphicon glyphicon-dashboard"></i> BITOPI GROUP
+            <span class="col-md-offset-1 col-sm-offset-2"> Budget : {{GroupTotal}} </span>
+            <span class="col-md-offset-1"> Onroll : {{GroupTotalActual}} </span>
+            <span class="col-md-offset-1"> Excess : {{GroupTotalExcess}} </span>
+            <span class="col-md-offset-1"> Unallocated : {{GroupTotalUnallocated}} </span>
+        </h2>
+        <span class="pull-right col-md-5 h6">
+            <span class="col-md-3">
+                <label>
+                    <input type="radio" ng-model="color.name" value="all" ng-click="ShowMP_DirectDetails($event)"> All 
+                </label>
+            </span>
+            <span class="col-md-3">
+                <label>
+                    <input type="radio" ng-model="color.name" value="direct" ng-click="ShowMP_DirectDetails($event)"> Direct
+                </label>
+            </span>
+            <span class="col-md-3">
+                <label class="">
+                    <input type="radio" ng-model="color.name" value="indirect" ng-click="ShowMP_DirectDetails($event)"> Indirect
+                </label>
+            </span>
+            <span class="col-md-3">
+                <label class="">
+                    <input type="radio" ng-model="color.name" value="other" ng-click="ShowMP_DirectDetails($event)"> Other
+                </label>
+            </span>
+        </span>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <aside class="accordion col-md-12">
+
+                <h1 class="">
+                    <i class="glyphicon glyphicon-user"></i> Present <span> Manpower Budget </span>
+                    <span class="col-md-5 col-sm-6 pull-right">
+                        <span class="col-md-2 col-sm-2 text-center blue" style="padding: 10px"> Budget </span>
+                        <span class="col-md-offset-1 col-md-2 col-sm-2 text-center white" style="padding: 10px"> Onroll </span>
+                        <span class="col-md-offset-1 col-md-2 col-sm-2 text-center orange" style="padding: 10px"> Shortage </span>
+                        <span class="col-md-offset-1 col-md-2 col-sm-2 text-center red" style="padding: 10px"> Excess </span>
+                        <span class="col-md-offset-1 col-md-2 col-sm-3 pull-right text-center yellow" style="padding:10px 10px 10px 5px"> Unallocated </span>
+                        @*<span class="pull-right text-center col-md-3 red" style="padding-top:10px;"> Unallocated </span>*@
+                    </span>
+                </h1>
+                <div class="tarasima">
+                    <span class="ng-scope bold"> Companies <i class="glyphicon glyphicon-arrow-down"></i></span>
+                </div>
+                <span ng-repeat="_C in Companies" class="tarasima">
+                    <h1 class="">
+                        <i class="glyphicon glyphicon-th-list"> </i> {{_C.CompanyName}}
+                        <span class="col-md-5 col-sm-6 pull-right">
+                            <span class="col-md-offset-1 col-md-2 col-sm-2 blue"><i class="glyphicon glyphicon-briefcase"></i> {{_C.Budget | number: 0 }} </span>
+                            <span class="col-md-offset-1 col-md-2 col-sm-2 white"><i class="glyphicon glyphicon-ok"></i> {{_C.Actual }} </span>
+                            <span class="col-md-offset-1 col-md-2 col-sm-2 orange"><i class="glyphicon glyphicon-minus"></i> {{_C.Shartage }} </span>
+                            <span class="col-md-offset-1 col-md-2 col-sm-2 red" id="{{_C.CompanyCode}}" title="{{_C.CompanyName}}" ng-click="_openExcessList($event)"><i class="glyphicon glyphicon-plus"></i> {{_C.Exceed }}</span>
+                            <span class="pull-right col-md-2 col-sm-2 yellow" id="{{_C.CompanyCode}}" title="{{_C.CompanyName}}" ng-click="_openUnallocated($event)">
+                                <i class="glyphicon glyphicon-edit"></i> {{_C.Unallocated }}
+                            </span>
+                        </span>
+                    </h1>
+
+                    <div class="tarasima">
+                        <span class="ng-scope bold"> Division <i class="glyphicon glyphicon-forward"></i></span>
+                        <span ng-repeat="d in _C.Divisions" class="ng-scope">
+                            <h2 class="glyphicon ng-binding" style="width: 47%;">
+                                <span class="bold ng-binding" ng-model="division" ng-click="divisionset(alert('hi'))"> {{d.DivisionName}} &nbsp;</span>
+                                <span class="col-lg-offset-2 col-md-8 col-sm-8 pull-right">
+                                    <span class="col-md-2 blue-div" style="padding: 0px 0px 0px 5px; width: 80px;"><i class="glyphicon glyphicon-briefcase"></i> {{d.Budget}}</span>
+                                    <span class="col-md-2 white-div" style="padding: 0px 0px 0px 5px; width: 80px;"><i class="glyphicon glyphicon-ok"></i> {{d.Actual}} </span>
+                                    <span class="col-md-2 orange-div" style="padding: 0px 0px 0px 5px; width: 80px;"><i class="glyphicon glyphicon-minus"></i> {{d.Shortage}} </span>
+                                    <span class="col-md-2 red-div" style="padding: 0px 0px 0px 5px; width: 80px;"><i class="glyphicon glyphicon-plus"></i> {{d.Excess}}</span>
+                                </span>
+                            </h2>
+                            @*------------------*@
+                            <p>
+                                <label class="table col-md-12" style="border-style: solid; border-width: 1px; padding-bottom: 7px;">
+                                    <span class="col-md-2 blue-unit-name glyphicon glyphicon-arrow-down"> Units </span>
+                                    <span class="col-md-1 blue-unit glyphicon glyphicon-briefcase"> Budget </span>
+                                    <span class="col-md-1 white-unit glyphicon glyphicon-ok"> Onroll </span>
+                                    <span class="col-md-1 orange-unit glyphicon glyphicon-minus"> Short </span>
+                                    <span class="col-md-1 red-unit glyphicon glyphicon-plus"> Excess </span>
+                                    <span class="col-md-2 maroon-unit glyphicon glyphicon-usd" style="width: 210px"> ExcessCost </span>
+                                    <span class="col-md-1 blue-unit-name glyphicon glyphicon-arrow-down"> Action </span>
+                                </label>
+                                <span ng-repeat="_unit in d.Units">
+                                    <label ng-if="1" class="table" style="border-style: solid; border-width: 1px;">
+                                        <span class="col-md-2 td15 glyphicon">{{_unit.UnitName}} </span>
+                                        <span class="col-md-1 blue glyphicon text-center"> {{_unit.Budget}} </span>
+                                        <span class="col-md-1 white-unit-td glyphicon text-center"> {{_unit.Actual}} </span>
+                                        <span class="col-md-1 orange glyphicon text-center"> {{_unit.Shortage}} </span>
+                                        <span class="col-md-1 red glyphicon text-center"> {{_unit.Excess}} </span>
+                                        <span class="col-md-2 maroon-unit glyphicon text-center"> {{_unit.ExcessCost}} </span>
+                                        <span class="col-md-1 glyphicon">
+                                            <a id="{{_unit.UnitCode}}" title="{{_unit.CompanyCode}}_{{_unit.CompanyName}}" ng-click="OpenngDiologValidation_Dept($event)" class="btn btn-info btn-xs">Unit Details </a>
+                                        </span>
+                                    </label>
+                                </span>
+
+                            </p>
+                            @*-----------------*@
+                        </span>
+                    </div>
+                </span>
+                <h1 class=""> </h1>
+            </aside>
+            <div class="row col-md-12">
+                <span class="col-md-offset-1 col-md-2"> &nbsp; <span id="msg" ng-model="btndisabled" class="btn-danger"></span> &nbsp;</span>
+                <button class="col-md-offset-6 col-md-2 btn btn-info-agile pull-right" ng-disabled="btndisabled" ng-model="userstory_software" value="Update" ng-click="save()">
+                    <i class="glyphicon glyphicon-refresh"></i> Refesh
+                </button>
+            </div>
+
+            <br>
+            <br>
+            <br>
+        }
+
+        <br />
+        <script type="text/ng-template" id="UnallocatedEmpList_Table">
+            <table id="example" class="table table-condensed table-bordered table-striped">
+                <tr>
+                    @*<th><input type="button" sections="exportAction" ng-click="exportAction()" /> </th>*@
+                    <label> {{employees[0].CompanyName}} || Total: {{employees.length}}</label>
+                </tr>
+                <tr>
+                    <th> Sr. </th>
+                    <th> BudgetCode </th>
+                    <th> EmployeeCode </th>
+                    <th> EmployeeName </th>
+                    <th> Designation </th>
+                    <th> Department </th>
+                    <th> JoningDate </th>
+                    <th> Remarks </th>
+                </tr>
+                <tr ng-repeat="e in employees | orderBy : 'Designation'">
+                    <td>{{ $index+1 }}</td>
+                    <td>{{e.BudgetCode }}</td>
+                    <td>{{e.EmployeeCode }}</td>
+                    <td>{{e.EmployeeName }}</td>
+                    <td>{{e.Designation }}</td>
+                    <td>{{e.Department }}</td>
+                    <td>{{e.JoiningDate | date :  "shortDate" }}</td>
+                    <td>{{e.EmployeeStatus}} <span ng-show="e.Total > 1"> Total: {{e.Total}}</span></td>
+                    @*<td type="hidden" ng-model="comname">{{e.CompanyName}}</td>*@
+                </tr>
+            </table>
+
+        </script>
+        <script type="text/ng-template" id="AllocatedEmpList">
+
+            <table id="example" class="table table-condensed table-bordered table-striped">
+                <tr>
+                    <label> {{employees[1].CompanyName}} || Total: {{employees.length}} || Allocated Manpower Distribution</label>
+                </tr>
+                <tr>
+                    <th> Sr. </th>
+                    <th> BudgetCode </th>
+                    <th> EmployeeID </th>
+                    <th> EmployeeName </th>
+                    <th> Designation </th>
+                    <th> JoiningDate </th>
+                    @*<th> Line </th>*@
+                    <th> Remarks </th>
+                </tr>
+                <tr ng-repeat="e in employees | orderBy : 'DesignationId'">
+                    <td>{{ $index+1 }}</td>
+                    <td>{{e.BudgetCode }}</td>
+                    <td>{{e.EmployeeCode }}</td>
+                    <td>{{e.EmployeeName }}</td>
+                    <td>{{e.Designation }}</td>
+                    <td>{{e.JoiningDate | date:'dd-MMM-yyyy'}}</td>
+                    @*<td>{{e.Line }}</td>*@
+                    <td>{{e.EmployeeStatus}} </td>
+                </tr>
+
+            </table>
+
+        </script>
+        <script type="text/ng-template" id="ExEmpList">
+
+            <table id="example" class="table table-condensed table-bordered table-striped">
+                <tr>
+                    <label> {{Exemployees[1].CompanyName}} || Total: {{Exemployees.length}} || Allocated Manpower Distribution</label>
+                </tr>
+                <tr>
+                    <th> Sr. </th>
+                    <th> BudgetCode </th>
+                    <th> EmployeeCode </th>
+                    <th> EmployeeName </th>
+                    <th> Designation </th>
+                    <th> Department </th>
+                    <th> JoiningDate </th>
+                    <th> Remarks </th>
+                </tr>
+                <tr ng-repeat="e in Exemployees | orderBy : 'Designation'">
+                    <td>{{ $index+1 }}</td>
+                    <td>{{e.BudgetCode }}</td>
+                    <td>{{e.EmployeeCode }}</td>
+                    <td>{{e.EmployeeName }}</td>
+                    <td>{{e.Designation }}</td>
+                    <td>{{e.Department }}</td>
+                    <td>{{e.JoiningDate | date:'dd-MMM-yyyy'}}</td>
+                    <td>{{e.EmployeeStatus}} </td>
+                </tr>
+
+            </table>
+
+        </script>
+        <script type="text/ng-template" id="Validation_DepartmentList">
+            <table style="margin-top: 0px !important;" class="table table-condensed table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <label> {{depts[1].CompanyName}}{{depts[0].CompanyCode}} || Total Departments: {{departments.length}} || Onroll Manpower Distribution </label>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th class=""> Sr. </th>
+                        <th class=""> DeptName </th>
+                        <th class=""> Budget </th>
+                        <th class=""> Onroll </th>
+                        <th class=""> Short </th>
+                        <th class=""> Ex </th>
+                        <th class=""> Sections </th>
+                        @*<th ng-repeat="c in cols">{{c}}</th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="dept in departments">
+                        <td>{{$index+1}} </td>
+                        <td ng-repeat="sections in dept" ng-init="isArr = isArray(sections)">
+                            <table ng-if="isArr" class="table table-condensed table-bordered table-striped" style="margin-bottom:0px">
+                                <thead>
+                                    <tr>
+                                        <th><button style="width: 20px;" ng-click="expanded = !expanded" expand><span ng-bind="expanded ? '-' : '+'"></span></button></th>
+                                        <th ng-repeat="(sh, sv) in sections[0]">{{sh}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="section in sections" ng-show="expanded">
+                                        <td> {{$index+1}}</td>
+                                        <td ng-repeat="subsections in section" ng-init="isArr = isArray(subsections)">
+
+                                            <table ng-if="isArr" class="table table-condensed table-bordered table-striped" style="margin-bottom:0px">
+                                                <thead>
+                                                    <tr>
+                                                        <td> <button style="width: 20px;" ng-click="expandedss = !expandedss" expand><span ng-bind="expandedss ? '-' : '+'"></span></button> </td>
+                                                        <th ng-repeat="(sj, ssv) in subsections[0]">{{sj}} </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="subs in subsections" ng-show="expandedss">
+                                                        <td> {{$index+1}}</td>
+                                                        <td ng-if="isArr" ng-repeat="subsv in subs" ng-init="isArr = isArray(subsv)">
+
+                                                            <table ng-if="isArr" class="table table-condensed table-bordered table-striped" style="margin-bottom:0px">
+                                                                <tbody>
+                                                                    <tr ng-repeat="lines in subsv" ng-show="expandedss">
+
+                                                                        <td ng-repeat="line in lines" ng-init="isArr = isArray(line)" class="blueviolet" ng-show="0" ng-if="isArr"> {{line}}_ </td>
+                                                                        <td>
+                                                                            <input type="hidden" ng-model="lines" value="{{lines}}" />
+                                                                            <button name="" class="btn btn-info btn-xs" style="width: 100px;" ng-click="ShowLineDetails(lines)"> Details </button>
+                                                                        </td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span ng-if="!isArr">{{subsv}}</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <span ng-if="!isArr">{{subsections}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <span ng-if="!isArr">{{sections}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </script>
+    </div>
+</div>
+<br />
+
+<script src="~/Content/Configuration/js/index.js"></script>
+

@@ -1,0 +1,33 @@
+{
+	"chartData": {
+		"bgColor": [
+			"#37546F",
+			"#5580A2"
+		],
+		"activeColor": [
+			"#1C7636",
+			"#26A251"
+		],
+		"labels": [
+			{
+				"text": "Discovery"
+			},
+			{
+				"text": "Scope"
+			},
+			{
+				"text": "Feasibility"
+			},
+			{
+				"text": "Development"
+			},
+			{
+				"text": "Verification"
+			},
+			{
+				"text": "Implementation",
+				"completed": "30%"
+			}
+		]
+	}
+}

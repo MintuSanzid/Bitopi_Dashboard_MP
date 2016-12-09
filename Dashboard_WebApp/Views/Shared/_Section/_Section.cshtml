@@ -1,0 +1,17 @@
+﻿<span data-ng-repeat="_section in _sections">
+    <h6 class="glyphicon glyphicon-plus"> {{_section}}</h6>
+    <div id="_sections.id">
+        <span data-ng-repeat="act in activities">
+            <h2 class="glyphicon glyphicon-plus"> <input id="_quality_{{_qmetrics.key}}_{{act}}" type="checkbox" name="producttype" value="{{act}}" onclick="change(this)" /> {{act}}</h2>
+            <p>
+                <span data-ng-repeat="pri in priorities">
+                    <input id="_quality_{{_qmetrics.key}}_{{act}}_{{pri}}" name="_quality_{{_qmetrics.key}}_{{act}}" type="radio" value="{{pri}}" onchange="changeRB(this)" /> <span> {{pri}} </span><br />
+                </span>
+            </p>
+        </span>
+        <span>
+            <h2 class="glyphicon glyphicon-plus ng-binding"> <input id="_quality_{{_qmetrics.key}}_Thumbnail" type="checkbox" name="producttype" value="Thumbnail" ng-click="changeQualityThumbnail(this)"> Thumbnail </h2>
+            <p> Enable or disable to checkbox checked </p>
+        </span>
+    </div>
+</span>

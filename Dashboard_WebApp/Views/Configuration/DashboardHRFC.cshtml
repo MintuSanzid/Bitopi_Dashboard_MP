@@ -1,0 +1,1159 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+<head>
+    <meta charset="UTF-8">
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dashboard</title>
+
+    <meta name="description" content="Free Admin Template Based On Twitter Bootstrap 3.x">
+    <meta name="author" content="">
+
+    <meta name="msapplication-TileColor" content="#5bc0de" />
+    <meta name="msapplication-TileImage" content="~/assets/img/metis-tile.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/assets/lib/bootstrap/css/bootstrap.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/assets/lib/font-awesome/css/font-awesome.css">
+
+    <!-- Metis core stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/main.css">
+
+    <!-- metisMenu stylesheet -->
+    <link rel="stylesheet" href="~/assets/lib/metismenu/metisMenu.css">
+
+    <!-- animate.css stylesheet -->
+    <link rel="stylesheet" href="~/assets/lib/animate.css/animate.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.css">
+    <script>
+        less = {
+            env: "development",
+            relativeUrls: false,
+            rootpath: "/~/assets/"
+        };
+    </script>
+    <link rel="stylesheet" href="~/assets/css/style-switcher.css">
+    <link rel="stylesheet/less" type="text/css" href="~/assets/less/theme.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+
+
+</head>
+<body class="">
+    <div class="bg-dark dk" id="wrap">
+        <div id="top">
+            <!-- .navbar -->
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container-fluid">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <header class="navbar-header">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="" style="font-size: 24px; margin: 15px; color: white"> Bitopi Group </a>
+
+                    </header>
+
+                    <div class="topnav">
+                        <div class="btn-group">
+                            <a data-placement="bottom" data-original-title="Fullscreen" data-toggle="tooltip"
+                               class="btn btn-default btn-sm" id="toggleFullScreen">
+                                <i class="glyphicon glyphicon-fullscreen"></i>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip"
+                               class="btn btn-default btn-sm">
+                                <i class="glyphicon glyphicon-envelope"></i>
+                                <span class="label label-warning">5</span>
+                            </a>
+                            <a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip"
+                               class="btn btn-default btn-sm">
+                                <i class="glyphicon glyphicon-bell"></i>
+                                <span class="label label-danger">4</span>
+                            </a>
+                            <a data-toggle="modal" data-original-title="Help" data-placement="bottom"
+                               class="btn btn-default btn-sm"
+                               href="#helpModal">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom"
+                               class="btn btn-metis-1 btn-sm">
+                                <i class="glyphicon glyphicon-off"></i>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a data-placement="bottom" data-original-title="Show / Hide Left" data-toggle="tooltip"
+                               class="btn btn-primary btn-sm toggle-left" id="menu-toggle">
+                                <i class="glyphicon glyphicon-remove-circle"></i>
+                            </a>
+                            <a data-placement="bottom" data-original-title="Show / Hide Right" data-toggle="tooltip"
+                               class="btn btn-default btn-sm toggle-right">
+                                <span class="glyphicon glyphicon-comment"></span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                        <!-- .nav -->
+                        @*<ul class="nav navbar-nav">
+                                <li class="active"><a href="dashboard.html">Dashboard</a></li>
+                                <li><a href="table.html">Tables</a></li>
+                                <li><a href="file.html">File Manager</a></li>
+                                <li class='dropdown '>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Form Elements <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="form-general.html">General</a></li>
+                                        <li><a href="form-validation.html">Validation</a></li>
+                                        <li><a href="form-wysiwyg.html">WYSIWYG</a></li>
+                                        <li><a href="form-wizard.html">Wizard &amp; File Upload</a></li>
+                                    </ul>
+                                </li>
+                            </ul>*@
+                        <!-- /.nav -->
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <!-- /.navbar -->
+            <header class="head">
+                @*<div class="search-bar">
+                        <form class="main-search" action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Live Search ...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-sm text-muted" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>*@
+                <!-- /.search-bar -->
+                @*<div class="main-bar">
+                        <h3>
+                            <i class="fa fa-dashboard"></i>&nbsp;
+                            Dashboard
+                        </h3>
+                    </div>*@
+                <!-- /.main-bar -->
+            </header>
+            <!-- /.head -->
+        </div>
+        <!-- /#top -->
+        <div id="left">
+            <div class="media user-media bg-dark dker">
+                <div class="user-media-toggleHover">
+                    <span class="fa fa-user"></span>
+                </div>
+                <div class="user-wrapper bg-dark">
+                    @*<a class="user-link" href="">
+                            <img class="media-object img-thumbnail user-img" alt="User Picture" src="~/assets/img/user.gif">
+                            <span class="label label-danger user-label">16</span>
+                        </a>
+
+                        <div class="media-body">
+                            <h5 class="media-heading">Archie</h5>
+                            <ul class="list-unstyled user-info">
+                                <li><a href="">Administrator</a></li>
+                                <li>
+                                    Last Access : <br>
+                                    <small><i class="fa fa-calendar"></i>&nbsp;16 Mar 16:32</small>
+                                </li>
+                            </ul>
+                        </div>*@
+                </div>
+            </div>
+            <!-- #menu -->
+            <!-- /#menu -->
+        </div>
+        <!-- /#left -->
+        <div id="content">
+            <div class="outer">
+                <div class="inner bg-light lter">
+                    <script src="~/Content/Fusion Charts/fusioncharts.js"></script>
+                    <script src="~/Content/Fusion Charts/fusioncharts.powercharts.js"></script>
+                    <script src="~/Content/Fusion Charts/fusioncharts.theme.fint.js"></script>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="box">
+                                <header> <h5> Tarasima Apparels Limited (TAL) </h5></header>
+                                <script type="text/javascript">
+
+                                    FusionCharts.ready(function () {
+                                        var ageGroupChart = new FusionCharts({
+                                            type: 'multilevelpie',
+                                            renderAt: 'chart_div_Division',
+                                            width: '1300',
+                                            height: '900',
+                                            dataFormat: 'json',
+                                            dataSource: {
+                                                "chart": {
+                                                    "caption": "Manpower Chart",
+                                                    "bgcolor": "FFFFFF",
+                                                    "pieborderthickness": "2",
+                                                    "piebordercolor": "FFFFFF",
+                                                    "basefontsize": "9",
+                                                    "usehovercolor": "1",
+                                                    "hoverfillcolor": "CCCCCC",
+                                                    "showlabels": "1",
+                                                    "showvalue": "1",
+                                                    "showvalueintooltip": "1",
+                                                    "showborder": "0"
+                                                },
+                                                "category": [
+                                                    {
+                                                        "label": "CEO",
+                                                        "hovertext": "Chief Technology Officer{br}Mr. Lucas Smith{br}Joined: 1988{br}More details can come here...",
+                                                        "color": "#FFFFFF",
+                                                        "link": "http://jsfiddle.net/fusioncharts/J7svx/",
+                                                        "category": [
+                                                            {
+                                                                "label": "CTO",
+                                                                "hovertext": "Chief Technology Officer{br}Mr. Ed Harley{br}Joined: 1988",
+                                                                "color": "#69a8ff",
+                                                                "link": "n-http://www.fusioncharts.com/company/team/",
+                                                                "category": [
+                                                                    {
+                                                                        "label": "Proj. Manager",
+                                                                        "hovertext": "Project Manager{br}Mr. Daniel Edwards",
+                                                                        "color": "#69a8ff",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "Design",
+                                                                                "hovertext": "Design Team{br}Akhil Dhanuka{br}Atrayee{br}Samit Basak",
+                                                                                "color": "#69a8ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Coding",
+                                                                                "hovertext": "Coding Team{br}Sanket Kumar{br}Folko{br}George Baker{br}Andrew Hall{br}Chris Schofield ",
+                                                                                "color": "#69a8ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Validate",
+                                                                                "hovertext": "Validation Team{br} Raju Sharma {br}Ravi Srivastav ",
+                                                                                "color": "#69a8ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    },
+                                                                    {
+                                                                        "label": "Q & A Manager",
+                                                                        "hovertext": "Q & A Manager{br}Mr. Lee Chong",
+                                                                        "color": "#69a8ff",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "Testing Team",
+                                                                                "hovertext": "Testing Team{br} Nik Arora {br}Jee Chou",
+                                                                                "color": "#69a8ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    },
+                                                                    {
+                                                                        "label": "Architect",
+                                                                        "hovertext": "System Architecture Manager{br}Mr. Rajiv Kumar",
+                                                                        "color": "#69a8ff",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "Production",
+                                                                                "hovertext": "Total-10{br}Absent-2{br}Sick-2{br}Leave2{br}Average-3%",
+                                                                                "color": "#69a8ff",
+                                                                                "category":[
+                                                                                    {
+                                                                                    "label": "Operator",
+                                                                                    "hovertext": "Design Team{br} Raju Sharma {br}Ravi Srivastav {br}Robin Smith {br}Harry Tofel",
+                                                                                    "color": "#69a8ff",
+                                                                                    "_userValue": null,
+                                                                                    "_value": 1
+                                                                                    }
+                                                                                ],
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Design",
+                                                                                "hovertext": "Design Team{br} Raju Sharma {br}Ravi Srivastav {br}Robin Smith {br}Harry Tofel",
+                                                                                "color": "#69a8ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    }
+                                                                ],
+                                                                "_userValue": null,
+                                                                "_value": 1
+                                                            },
+                                                            {
+                                                                "label": "CFO",
+                                                                "hovertext": "Chief Financial Officer{br}Mr. John Smith{br}Joined: 1987",
+                                                                "color": "#6fc9ff",
+                                                                "link": "n-http://www.fusioncharts.com/company/team/",
+                                                                "category": [
+                                                                    {
+                                                                        "label": "Payables",
+                                                                        "hovertext": "Accounts Payable Team",
+                                                                        "color": "#6fc9ff",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "Salary",
+                                                                                "hovertext": "Team for salary accounts maintenance and upkeep",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Purchase",
+                                                                                "hovertext": "Team for accounting of  purchase of S/w and goods",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Other",
+                                                                                "hovertext": "Other Payments",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    },
+                                                                    {
+                                                                        "label": "Receivables",
+                                                                        "hovertext": "Accounts Receivables Team",
+                                                                        "color": "#6fc9ff",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "SW1",
+                                                                                "hovertext": "Online Software Receipts Accounts",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "SW2",
+                                                                                "hovertext": "Physical Software Receipts Accounts",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "SER1",
+                                                                                "hovertext": "Services Collection",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "SER2",
+                                                                                "hovertext": "Services Collection (Physical)",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "OTR",
+                                                                                "hovertext": "Subscription and Other Collections",
+                                                                                "color": "#6fc9ff",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    }
+                                                                ],
+                                                                "_userValue": null,
+                                                                "_value": 1
+                                                            },
+                                                            {
+                                                                "label": "CIO",
+                                                                "hovertext": "Chief Information Officer{br}Mr. David Brown{br}Joined: 1992",
+                                                                "color": "#6b8dee",
+                                                                "link": "n-http://www.fusioncharts.com/company/team/",
+                                                                "category": [
+                                                                    {
+                                                                        "label": "PR",
+                                                                        "hovertext": "PR Team",
+                                                                        "color": "#6b8dee",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "Packaging",
+                                                                                "hovertext": "Packaging Staff",
+                                                                                "color": "#6b8dee",
+                                                                                "category":[
+                                                                                    {
+                                                                                    "label": "Operator",
+                                                                                    "hovertext": "Design Team{br} Raju Sharma {br}Ravi Srivastav {br}Robin Smith {br}Harry Tofel",
+                                                                                    "color": "#6b8dee",
+                                                                                    "_userValue": null,
+                                                                                    "_value": 1
+                                                                                    }
+                                                                                ],
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Inv Rel.",
+                                                                                "hovertext": "Investor Relations Upkeep",
+                                                                                "color": "#6b8dee",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Marketing",
+                                                                                "hovertext": "Marketing & Sales",
+                                                                                "color": "#6b8dee",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    },
+                                                                    {
+                                                                        "label": "HR",
+                                                                        "hovertext": "HR Team",
+                                                                        "color": "#6b8dee",
+                                                                        "category": [
+                                                                            {
+                                                                                "label": "Selection",
+                                                                                "hovertext": "Selection of Candidates",
+                                                                                "color": "#6b8dee",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            },
+                                                                            {
+                                                                                "label": "Deploying",
+                                                                                "hovertext": "Deploying at required site",
+                                                                                "color": "#6b8dee",
+                                                                                "_userValue": null,
+                                                                                "_value": 1
+                                                                            }
+                                                                        ],
+                                                                        "_userValue": null,
+                                                                        "_value": 1
+                                                                    }
+                                                                ],
+                                                                "_userValue": null,
+                                                                "_value": 1
+                                                            }
+                                                        ],
+                                                        "_userValue": null,
+                                                        "_value": 1
+                                                    }
+                                                ]
+                                            }
+                                        }).render();
+
+                                        var ageGroupChart = new FusionCharts({
+                                            type: 'pie3d',
+                                            renderAt: 'piechart_3d',
+                                            width: '350',
+                                            height: '300',
+                                            dataFormat: 'json',
+                                            dataSource: {
+                                                "chart": {
+                                                    "caption": "Daily Manpower Status",
+                                                    "palette": "2",
+                                                    "animation": "1",
+                                                    "formatnumberscale": "1",
+                                                    "decimals": "0",
+                                                    //"numberprefix": "$",
+                                                    "pieslicedepth": "30",
+                                                    "startingangle": "125",
+                                                    "showborder": "0",
+                                                    "showLegend": "1",
+
+                                                    "legendborder": "0",
+                                                    "legendposition": "button",
+                                                    "enablesmartlabels": "1",
+                                                    "use3dlighting": "0",
+                                                    "showshadow": "0",
+                                                    "legendbgcolor": "#CCCCCC",
+                                                    "legendbgalpha": "20",
+                                                    "legendborderalpha": "0",
+                                                    "legendshadow": "0",
+                                                    "legendnumcolumns": "3"
+                                                    //"palettecolors": "#f8bd19,#e44a00,#008ee4,#33bdda,#6baa01,#583e78"
+                                                },
+                                                "data": [
+
+                                                    {
+                                                        "label": "Women",
+                                                        "value": "1000",
+                                                        "issliced": "0"
+                                                    },
+                                                    {
+                                                        "label": "Men",
+                                                        "value": "300",
+                                                        "issliced": "0"
+                                                    },
+                                                    {
+                                                        "label": "Absent",
+                                                        "value": "20",
+                                                        "issliced": "1"
+                                                    },
+                                                    {
+                                                        "label": "Sick",
+                                                        "value": "20",
+                                                        "issliced": "1"
+                                                    },
+                                                    {
+                                                        "label": "Leave",
+                                                        "value": "20",
+                                                        "issliced": "1"
+                                                    }
+                                                ]
+                                            }
+                                        }).render();
+
+                                        var budgetChartTest = new FusionCharts({
+                                            type: 'radar',
+                                            renderAt: 'chart-container_Details',
+                                            width: '500',
+                                            height: '450',
+                                            dataFormat: 'json',
+                                            dataSource: {
+                                                "chart": {
+                                                    "caption": "Man Power Budget Analysis",
+                                                    "subCaption": "Current Year",
+                                                    "captionFontSize": "14",
+                                                    "subcaptionFontSize": "14",
+                                                    "numberPrefix": "$",
+                                                    "baseFontColor": "#333333",
+                                                    "baseFont": "Helvetica Neue,Arial",
+                                                    "subcaptionFontBold": "0",
+                                                    "paletteColors": "#008ee4,#6baa01",
+                                                    "bgColor": "#ffffff",
+                                                    "radarfillcolor": "#ffffff",
+                                                    "showBorder": "0",
+                                                    "showShadow": "0",
+                                                    "showCanvasBorder": "0",
+                                                    "legendBorderAlpha": "0",
+                                                    "legendShadow": "0",
+                                                    "divLineAlpha": "10",
+                                                    "usePlotGradientColor": "0",
+                                                    "numberPreffix": "$"
+                                                },
+                                                "categories": [
+                                                    {
+                                                        "font": "Arial",
+                                                        "fontsize": "11",
+                                                        "category": [
+                                                            {
+                                                                "label": "Jan",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Feb",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Mar",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Apr",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "May",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Jun",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Jul",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Aug",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Sep",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Oct",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Nov",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Dec",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "dataset": [
+                                                    {
+                                                        "seriesname": "Allocated Budget",
+                                                        "color": "CD6AC0",
+                                                        "anchorsides": "6",
+                                                        "anchorradius": "2",
+                                                        "anchorbordercolor": "CD6AC0",
+                                                        "anchorgbalpha": "0",
+                                                        "data": [
+                                                            {
+                                                                "value": "1127654"
+                                                            },
+                                                            {
+                                                                "value": "1226234"
+                                                            },
+                                                            {
+                                                                "value": "1299456"
+                                                            },
+                                                            {
+                                                                "value": "1311565"
+                                                            },
+                                                            {
+                                                                "value": "1324454"
+                                                            },
+                                                            {
+                                                                "value": "1357654"
+                                                            },
+                                                            {
+                                                                "value": "1296234"
+                                                            },
+                                                            {
+                                                                "value": "1359456"
+                                                            },
+                                                            {
+                                                                "value": "1391565"
+                                                            },
+                                                            {
+                                                                "value": "1414454"
+                                                            },
+                                                            {
+                                                                "value": "1671565"
+                                                            },
+                                                            {
+                                                                "value": "1134454"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "seriesname": "Actual Cost",
+                                                        "color": "0099FF",
+                                                        "anchorsides": "10",
+                                                        "anchorbordercolor": "0099FF",
+                                                        "anchorgbalpha": "0",
+                                                        "anchorradius": "2",
+                                                        "data": [
+                                                            {
+                                                                "value": "534241"
+                                                            },
+                                                            {
+                                                                "value": "556728"
+                                                            },
+                                                            {
+                                                                "value": "575619"
+                                                            },
+                                                            {
+                                                                "value": "676713"
+                                                            },
+                                                            {
+                                                                "value": "665520"
+                                                            },
+                                                            {
+                                                                "value": "634241"
+                                                            },
+                                                            {
+                                                                "value": "656728"
+                                                            },
+                                                            {
+                                                                "value": "675619"
+                                                            },
+                                                            {
+                                                                "value": "776713"
+                                                            },
+                                                            {
+                                                                "value": "865520"
+                                                            },
+                                                            {
+                                                                "value": "976713"
+                                                            },
+                                                            {
+                                                                "value": "665520"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }).render();
+
+                                    });
+                                </script>
+
+                                <div id="chart_div_Division" style="width: 100%; height: 600px; float: right"></div>
+                                @*<div id="piechart_3d" style="float: left"></div>*@
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="row" style="margin-top: 285px;">
+                        <div class="col-lg-12">
+                            <div class="box">
+                                <header> <h5>Tarasima Apparels Limited (TAL)</h5></header>
+
+                                <script type="text/javascript">
+
+                                    FusionCharts.ready(function () {
+
+                                        var budgetChart = new FusionCharts({
+                                            type: 'radar',
+                                            renderAt: 'chart-container',
+                                            width: '500',
+                                            height: '450',
+                                            dataFormat: 'json',
+                                            dataSource: {
+                                                "chart": {
+                                                    "caption": "Man Power Budget Analysis",
+                                                    "subCaption": "Current month",
+                                                    "captionFontSize": "14",
+                                                    "subcaptionFontSize": "14",
+                                                    "numberPrefix": "$",
+                                                    "baseFontColor": "#333333",
+                                                    "baseFont": "Helvetica Neue,Arial",
+                                                    "subcaptionFontBold": "0",
+                                                    "paletteColors": "#008ee4,#6baa01",
+                                                    "bgColor": "#ffffff",
+                                                    "radarfillcolor": "#ffffff",
+                                                    "showBorder": "0",
+                                                    "showShadow": "0",
+                                                    "showCanvasBorder": "0",
+                                                    "legendBorderAlpha": "0",
+                                                    "legendShadow": "0",
+                                                    "divLineAlpha": "10",
+                                                    "usePlotGradientColor": "0",
+                                                    "numberPreffix": "$"
+
+                                                },
+                                                "categories": [
+                                                    {
+                                                        "category": [
+                                                            { "label": "Marketing" },
+                                                            { "label": "Product Management" },
+                                                            { "label": "Customer Service" },
+                                                            { "label": "Human Resource" },
+                                                            { "label": "Sales & Distribution" }
+                                                        ]
+                                                    }
+                                                ],
+                                                "dataset": [
+                                                    {
+                                                        "seriesname": "Allocated Budget",
+                                                        "data": [
+                                                            { "value": "19000" },
+                                                            { "value": "16500" },
+                                                            { "value": "14300" },
+                                                            { "value": "10000" },
+                                                            { "value": "9800" }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "seriesname": "Actual Cost",
+                                                        "data": [
+                                                            { "value": "6000" },
+                                                            { "value": "9500" },
+                                                            { "value": "11900" },
+                                                            { "value": "8000" },
+                                                            { "value": "9700" }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }).render();
+
+                                        var budgetChartTest = new FusionCharts({
+                                            type: 'radar',
+                                            renderAt: 'chart-container_Details',
+                                            width: '500',
+                                            height: '450',
+                                            dataFormat: 'json',
+                                            dataSource: {
+                                                "chart": {
+                                                    "caption": "Man Power Budget Analysis",
+                                                    "subCaption": "Current Year",
+                                                    "captionFontSize": "14",
+                                                    "subcaptionFontSize": "14",
+                                                    "numberPrefix": "$",
+                                                    "baseFontColor": "#333333",
+                                                    "baseFont": "Helvetica Neue,Arial",
+                                                    "subcaptionFontBold": "0",
+                                                    "paletteColors": "#008ee4,#6baa01",
+                                                    "bgColor": "#ffffff",
+                                                    "radarfillcolor": "#ffffff",
+                                                    "showBorder": "0",
+                                                    "showShadow": "0",
+                                                    "showCanvasBorder": "0",
+                                                    "legendBorderAlpha": "0",
+                                                    "legendShadow": "0",
+                                                    "divLineAlpha": "10",
+                                                    "usePlotGradientColor": "0",
+                                                    "numberPreffix": "$"
+                                                },
+                                                "categories": [
+                                                    {
+                                                        "font": "Arial",
+                                                        "fontsize": "11",
+                                                        "category": [
+                                                            {
+                                                                "label": "Jan",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Feb",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Mar",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Apr",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "May",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Jun",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Jul",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Aug",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Sep",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Oct",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Nov",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            },
+                                                            {
+                                                                "label": "Dec",
+                                                                "font": "Arial",
+                                                                "fontsize": "11"
+                                                            }
+                                                        ]
+                                                    }
+                                                ],
+                                                "dataset": [
+                                                    {
+                                                        "seriesname": "Allocated Budget",
+                                                        "color": "CD6AC0",
+                                                        "anchorsides": "6",
+                                                        "anchorradius": "2",
+                                                        "anchorbordercolor": "CD6AC0",
+                                                        "anchorgbalpha": "0",
+                                                        "data": [
+                                                            {
+                                                                "value": "1127654"
+                                                            },
+                                                            {
+                                                                "value": "1226234"
+                                                            },
+                                                            {
+                                                                "value": "1299456"
+                                                            },
+                                                            {
+                                                                "value": "1311565"
+                                                            },
+                                                            {
+                                                                "value": "1324454"
+                                                            },
+                                                            {
+                                                                "value": "1357654"
+                                                            },
+                                                            {
+                                                                "value": "1296234"
+                                                            },
+                                                            {
+                                                                "value": "1359456"
+                                                            },
+                                                            {
+                                                                "value": "1391565"
+                                                            },
+                                                            {
+                                                                "value": "1414454"
+                                                            },
+                                                            {
+                                                                "value": "1671565"
+                                                            },
+                                                            {
+                                                                "value": "1134454"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "seriesname": "Actual Cost",
+                                                        "color": "0099FF",
+                                                        "anchorsides": "10",
+                                                        "anchorbordercolor": "0099FF",
+                                                        "anchorgbalpha": "0",
+                                                        "anchorradius": "2",
+                                                        "data": [
+                                                            {
+                                                                "value": "534241"
+                                                            },
+                                                            {
+                                                                "value": "556728"
+                                                            },
+                                                            {
+                                                                "value": "575619"
+                                                            },
+                                                            {
+                                                                "value": "676713"
+                                                            },
+                                                            {
+                                                                "value": "665520"
+                                                            },
+                                                            {
+                                                                "value": "634241"
+                                                            },
+                                                            {
+                                                                "value": "656728"
+                                                            },
+                                                            {
+                                                                "value": "675619"
+                                                            },
+                                                            {
+                                                                "value": "776713"
+                                                            },
+                                                            {
+                                                                "value": "865520"
+                                                            },
+                                                            {
+                                                                "value": "976713"
+                                                            },
+                                                            {
+                                                                "value": "665520"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        }).render();
+
+                                    });
+                                </script>
+
+                                @*<div id="chart_div" style="width: 600px; height: 300px; float: right"></div>*@
+
+                                <div id="chart-container" style="width: 500px; height: 400px;float: left"> FusionCharts will render here </div>
+                                <div id="chart-container_Details" style="width: 600px; height: 400px; float: right"> FusionCharts will render here</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="box">
+                                <header><h5> Calendar</h5></header>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.inner -->
+            </div>
+            <!-- /.outer -->
+        </div>
+        <!-- /#content -->
+        <div id="right" class="bg-light lter">
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Warning!</strong> Best check yo self, you're not looking too good.
+            </div>
+            <!-- .well well-small -->
+            <div class="well well-small dark">
+                <ul class="list-unstyled">
+                    <li>Visitor <span class="inlinesparkline pull-right">1,4,4,7,5,9,10</span></li>
+                    <li>Online Visitor <span class="dynamicsparkline pull-right">Loading..</span></li>
+                    <li>Popularity <span class="dynamicbar pull-right">Loading..</span></li>
+                    <li>New Users <span class="inlinebar pull-right">1,3,4,5,3,5</span></li>
+                </ul>
+            </div>
+            <!-- /.well well-small -->
+            <!-- .well well-small -->
+            <div class="well well-small dark">
+                <button class="btn btn-block">Default</button>
+                <button class="btn btn-primary btn-block">Primary</button>
+                <button class="btn btn-info btn-block">Info</button>
+                <button class="btn btn-success btn-block">Success</button>
+                <button class="btn btn-danger btn-block">Danger</button>
+                <button class="btn btn-warning btn-block">Warning</button>
+                <button class="btn btn-inverse btn-block">Inverse</button>
+                <button class="btn btn-metis-1 btn-block">btn-metis-1</button>
+                <button class="btn btn-metis-2 btn-block">btn-metis-2</button>
+                <button class="btn btn-metis-3 btn-block">btn-metis-3</button>
+                <button class="btn btn-metis-4 btn-block">btn-metis-4</button>
+                <button class="btn btn-metis-5 btn-block">btn-metis-5</button>
+                <button class="btn btn-metis-6 btn-block">btn-metis-6</button>
+            </div>
+            <!-- /.well well-small -->
+            <!-- .well well-small -->
+            <div class="well well-small dark">
+                <span>Default</span><span class="pull-right"><small>20%</small></span>
+
+                <div class="progress xs">
+                    <div class="progress-bar progress-bar-info" style="width: 20%"></div>
+                </div>
+                <span>Success</span><span class="pull-right"><small>40%</small></span>
+
+                <div class="progress xs">
+                    <div class="progress-bar progress-bar-success" style="width: 40%"></div>
+                </div>
+                <span>warning</span><span class="pull-right"><small>60%</small></span>
+
+                <div class="progress xs">
+                    <div class="progress-bar progress-bar-warning" style="width: 60%"></div>
+                </div>
+                <span>Danger</span><span class="pull-right"><small>80%</small></span>
+
+                <div class="progress xs">
+                    <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /#right -->
+    </div>
+    <!-- /#wrap -->
+    <footer class="Footer bg-dark dker">
+        <p>2016 &copy; Dashboard Template</p>
+    </footer>
+    <!-- /#footer -->
+    <!-- #helpModal -->
+    <div id="helpModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- /#helpModal -->
+    <!--jQuery -->
+    <script src="~/assets/lib/jquery/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.5/fullcalendar.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.18.4/js/jquery.tablesorter.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.selection.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.min.js"></script>
+    <!--Bootstrap -->
+    <script src="~/assets/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/assets/lib/bootstrap/js/bootstrap.js"></script>
+    <!-- MetisMenu -->
+    <script src="~/assets/lib/metismenu/metisMenu.js"></script>
+    <!-- Screenfull -->
+    <script src="~/assets/lib/screenfull/screenfull.js"></script>
+
+    <!-- Metis core scripts -->
+    <script src="~/assets/js/core.js"></script>
+    <!-- Metis demo scripts -->
+    <script src="~/assets/js/app.js"></script>
+    <script>
+        $(function () {
+            Metis.dashboard();
+        });
+    </script>
+    <script src="~/assets/js/style-switcher.js"></script>
+</body>

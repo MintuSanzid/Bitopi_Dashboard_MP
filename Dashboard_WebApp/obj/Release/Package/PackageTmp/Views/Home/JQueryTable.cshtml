@@ -1,0 +1,215 @@
+﻿
+<script src="~/Content/Configuration/js/jquery-1.9.1.min.js"></script>
+<link href="~/Content/Configuration/js/jquery.dataTables.css" rel="stylesheet" />
+<link href="~/Content/Configuration/js/jquery.dataTables_themeroller.css" rel="stylesheet" />
+<script src="~/Content/Configuration/js/jquery.dataTables.min.js"></script>
+<script>
+    function fnFormatDetails(itable, pos) {
+        var sOut = "<table id=\"inner" + pos + "\">";
+        sOut += itable;
+        sOut += "</table>";
+        return sOut;
+    }
+
+    function fnFormatDetails1(jtable, pos1, pos2) {
+        var sOut = "<table id=\"doubleinner" + pos1 + '_' + pos2 + "\">";
+        sOut += jtable;
+        sOut += "</table>";
+        return sOut;
+    }
+    var anOpen = [];
+    var anOpen1 = [];
+    $(document).ready(function () {
+        var itable = $('#example').html();
+        var jtable = $('#example1').html();
+
+        var oTable = $('#example').dataTable({
+            "bRetrieve": true,
+            "bJQueryUI": true,
+            "iDisplayLength": 5,
+            "sPaginationType": "full_numbers",
+            "sDom": '<"F"lfT>t<"F"p>'
+        });
+        $('#example').on("click", "td.control", function () {
+            debugger;
+            var nTr = this.parentNode;
+            var i = $.inArray(nTr, anOpen);
+            if (i === -1) {
+                var iPos = oTable.fnGetPosition(nTr);
+                $('img', this).attr('alt', "-");
+                var nDetailsRow = oTable.fnOpen(nTr, fnFormatDetails(itable, iPos), 'details');
+                $('div.innerDetails', nDetailsRow).slideDown();
+                anOpen.push(nTr);
+                var oInnerTable = $('#inner' + iPos).dataTable({
+                    "bRetrieve": true,
+                    "bJQueryUI": true,
+                    "iDisplayLength": 5,
+                    "sPaginationType": "full_numbers",
+                    "sDom": '<"F"lfT>t<"F"p>'
+                });
+                //2nd Level Drilldown starts here                                                         
+                $('#inner' + iPos).on("click", "td.control", function () {
+                    var nTr1 = this.parentNode;
+                    var j = $.inArray(nTr1, anOpen1);
+                    if (j === -1) {
+                        var jPos = oInnerTable.fnGetPosition(nTr1);
+                        $('img', this).attr('alt', "-");
+                        var nDetailsRow1 = oInnerTable.fnOpen(nTr1, fnFormatDetails1(jtable, iPos, jPos), 'details');
+                        $('div.innerDetails', nDetailsRow1).slideDown();
+                        anOpen1.push(nTr1);
+                        var oInnerTable1 = $('#doubleinner' + iPos + '_' + jPos).dataTable({
+                            "bRetrieve": true,
+                            "bJQueryUI": true,
+                            "iDisplayLength": 5,
+                            "sPaginationType": "full_numbers",
+                            "sDom": '<"F"lfT>t<"F"p>'
+                        });
+                    }
+                    else {
+                        $('img', this).attr('alt', "+");
+                        oInnerTable.fnClose(this.parentNode);
+                        anOpen1.splice(j, 1);
+                    }
+                    event.stopPropagation();
+                });
+                //2nd Level Drilldown ends here           
+            }
+            else {
+                $('img', this).attr('alt', "+");
+                oTable.fnClose(this.parentNode);
+                anOpen.splice(i, 1);
+                event.stopPropagation();
+            }
+        });
+    });
+</script>
+<body>
+    <div class="container">
+        <table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="example">
+            <thead>
+                <tr>
+                    <th>L2Type</th>
+                    <th>Type</th>
+                    <th>Variation</th>
+                    <th>Level</th>
+                    <th>Lifespan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>A</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>B</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>C</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>D</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>E</td>
+                    <td>5</td>
+                    <td>9</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>F</td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>G</td>
+                    <td>5</td>
+                    <td>9</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>H</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>I</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>J</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>K</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>L</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td class="control center"><img alt="+"></td>
+                    <td>M</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>64</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="container" style="display:none;">
+        <table cellpadding="0" cellspacing="0" border="0" class="dataTable" id="example1">
+            <thead>
+                <tr>
+                    <th>L3Type</th>
+                    <th>L3Variation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

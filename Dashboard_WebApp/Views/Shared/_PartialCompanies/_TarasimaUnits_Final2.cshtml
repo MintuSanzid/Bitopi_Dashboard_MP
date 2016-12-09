@@ -1,0 +1,31 @@
+﻿
+
+<p>
+    <a class="btn btn-default" href="" ng-click="OpenngDiologValidation_Table()">Show a Modal</a>
+</p>
+
+<script type="text/ng-template" id="Validation_Table_">   
+        <h2 class="h2 text-center"> Table Demo </h2>
+        <br />     
+        <table class="table table-condensed table-bordered table-striped">
+            <tr>
+                <th> Sr. </th>
+                <th> Budet Code </th>
+                <th> Dept. </th>
+                <th> Sec </th>
+                <th> Sub.Sec </th>
+                <th> Line </th>
+                <th> Desig. </th>
+                <th> Budget </th>
+                <th> Act </th>
+                <th> Access </th>
+                <th> Short  </th>
+                <th> Remarks </th>
+            </tr>
+            <tr ng-repeat="x in names | orderBy : 'Country'">
+                <td >{{ $index+1 }}</td>
+                <td>{{ x.Name }}</td>
+                <td>{{ x.Country }}</td>
+            </tr>
+        </table>   
+</script>

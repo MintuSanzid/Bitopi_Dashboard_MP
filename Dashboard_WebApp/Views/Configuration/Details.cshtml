@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutConfiguration.cshtml";
+}
+
+<br />
+<div class="body-content">
+    <div class="container-dash">
+        <div id="OneParent">
+            @*<img id="OneImage" class="box-toggle" data-paired-element="One" src="../../Content/Images/minus.jpg" width="15px" height="15px"/>*@
+            <label>
+                <input type="checkbox" id="One" class="group" />One
+            </label>
+            <div class="One child-group col-lg-offset-1">
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" class="One child circulationList" name="SelectedUsers" value="User1" />User1
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" class="One child circulationList" name="SelectedUsers" value="User2" />User2
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="TwoParent">
+
+            <label>
+                <input type="checkbox" id="Two" class="group"/>Two
+            </label>
+            <div class="Two child-group col-lg-offset-1">
+                <label>
+                    <input type="checkbox" class="Two child circulationList" name="SelectedUsers" value="User3"/>User3
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+   
+    $('.child').on('change', function () {
+        var parent = $(this).closest('.child-group'),
+            status = parent.find('input.child').not(':checked').length === 0;
+        var html = parent.prev("label").find('.group').prop('checked', status);
+    }).trigger('change');
+</script>

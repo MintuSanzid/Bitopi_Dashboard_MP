@@ -1,0 +1,498 @@
+﻿
+<script type="text/javascript">
+    function loadPartialSubSection() {
+        var detailDiv = $("#subsection_1");
+        $.get("/Configuration/DisplaySubSection", function (data) {
+            detailDiv.html(data);
+            return false;
+        });
+    }
+</script>
+
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" id="h6" onclick="loadPartialSubSection();">
+        <span class="bold"> General </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">01</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">01</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">01</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection border-tag" id="subsection_1"> SubSection </div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Planning </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Project </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Design Studio </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Merchandising </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> CAD Pattern </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Sampling </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Research Development </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding">
+        <span class="bold"> Development </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold">  Technical  </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding">
+        <span class="bold"> Lab </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Raw Material </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding">
+        <span class="bold"> Cutting </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Sewing </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Dry Process </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Wet Process </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold">  Pressing Curing </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Finishing CPU </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Finishing </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    @* @Html.Partial("_PartialCompanies/_SubSections")*@
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Audit </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Industrial Engineering </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold">  Production Accounting  </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Material Handling Movement </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Maintenance </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Preventive Maintenance </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Regular Maintenance </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Power </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Steam Condensate </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Air, Vacume Air Cooling </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> WTP, ETP RO </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Electro-Mechnical </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Electronics </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> HR </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Personnel </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Administration </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Compliance </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Industrial Relations </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Welfare </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Security </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Accounts </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> MIS </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    @* @Html.Partial("_PartialCompanies/_SubSections")*@
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Commercial </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Store Warehouse </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Finish Goods Warehouse </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> DSS </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> IT </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Supply Chain (Production) </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span><span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Supply Chain (Non-Production) </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Laboratory </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>
+<span class="ng-scope">
+    <h6 class="glyphicon glyphicon-arrow-down ng-binding" ng-click="loadPartialSubSection()">
+        <span class="bold"> Embroidery </span>
+        <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+        <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+        <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+        <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+    </h6>
+    <div class="subsection"></div>
+</span>

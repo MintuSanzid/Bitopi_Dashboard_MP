@@ -1,0 +1,50 @@
+﻿
+<script type="text/javascript">
+    function loadPartialDesignationGp() {
+        var detailDiv = $("#designationGp");
+        $.get("/Configuration/DisplayDesignationGp", function (data) {
+            detailDiv.html(data);
+            return false;
+        });
+    };
+</script>
+
+<span>
+    <span class="ng-scope">
+        <h4 class="glyphicon glyphicon-arrow-down ng-binding" onclick="loadPartialDesignationGp()">
+            <span class="bold ng-binding"> ET Staff </span>
+            <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+            <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+            <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+            <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+        </h4>
+        <div class="line border-tag" id="designationGp"> </div>
+    </span><span class="ng-scope">
+        <h4 class="glyphicon glyphicon-arrow-down ng-binding">
+            <span class="bold ng-binding"> Sub-Staff </span>
+            <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+            <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+            <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+            <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+        </h4>
+        <div class="line" id=""> </div>
+    </span><span class="ng-scope">
+        <h4 class="glyphicon glyphicon-arrow-down ng-binding">
+            <span class="bold ng-binding"> Worker </span>
+            <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+            <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+            <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+            <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+        </h4>
+        <div class="line" id=""> </div>
+    </span><span class="ng-scope">
+        <h4 class="glyphicon glyphicon-arrow-down ng-binding">
+            <span class="bold ng-binding"> Other </span>
+            <span class="rosybrown small glyphicon glyphicon glyphicon-ok">00</span>
+            <span class="goldenrod small glyphicon glyphicon-briefcase">00</span>
+            <span class="yellowgreen small glyphicon glyphicon-minus">00</span>
+            <span class="blueviolet small glyphicon glyphicon-plus">00</span>
+        </h4>
+        <div class="line" id=""> </div>
+    </span>
+</span>

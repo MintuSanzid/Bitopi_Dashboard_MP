@@ -1,0 +1,25 @@
+﻿
+
+<div class="">
+    <span data-ng-repeat="_qmetrics in _qualityMetrics">
+        <h2 class="glyphicon"> {{_qmetrics.name}}</h2>
+        <div id="_qmetrics.id">
+            <span data-ng-repeat="_unit in _units">
+                <h3 class="glyphicon glyphicon-plus"> {{_unit}}</h3>
+                <div id="_unit.id">
+                    <span data-ng-repeat="_catagory in _catagories">
+                        <h4 class="glyphicon glyphicon-plus"> {{_catagory}}</h4>
+                        <div id="_catagory.id">
+                            <span data-ng-repeat="_department in _departments">
+                                <h5 class="glyphicon glyphicon-plus"> {{_department}}</h5>
+                                <div id="_department.id">
+                                    @*@Html.Partial("_Section/_Section")*@
+                                </div>
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </span>
+        </div>
+    </span>
+</div>

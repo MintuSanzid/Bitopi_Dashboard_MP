@@ -1,0 +1,326 @@
+
+{
+ 
+  "chartData": {
+    "generalData": [
+      {
+        "name": "Business Momentum",
+        "color": "#FEFC00",
+        "href": "http://google.com"
+      },
+      {
+        "name": "Agile Vorticity",
+        "color": "#EF0601",
+        "href": "http://google.com",
+        "pulse": true
+      },
+      {
+        "name": "Marker Pressure",
+        "color": "#00ED31",
+        "href": "http://google.com"
+      }
+    ],
+    "sectorsData": [
+      {
+        "name": "quality",
+        "label": "Quality",
+        "data": [
+          {
+            "name": "hardware",
+            "color": "#EF0601",
+            "pulse": true,
+            "href": "https://www.facebook.com/"
+          },
+          {
+            "name": "firmware",
+            "color": "#C7BA37",
+            "href": "http://demos.telerik.com/"
+          },
+          {
+            "name": "software",
+            "color": "#00EC32",
+            "pulse": false,
+            "href": "/Report/Quality"
+          },
+          {
+            "name": "product-genesis",
+            "color": "#EF0601",
+            "pulse": true,
+            "href": "http://google.com"
+          }
+        ]
+      },
+      {
+        "name": "value",
+        "label": "Value",
+        "data": [
+          {
+            "name": "hardware",
+            "color": "#FFEA5B",
+            "href": "http://google.com"
+          },
+          {
+            "name": "firmware",
+            "color": "#FD5552",
+            "href": "http://google.com"
+          },
+          {
+            "name": "software",
+            "color": "#C73937",
+            "pulse": true,
+            "href": "/Report/Value"
+          },
+          {
+            "name": "product-genesis",
+            "color": "#FFFC01",
+            "href": "http://google.com"
+          }
+        ]
+      },
+      {
+        "name": "constraint",
+        "label": "Constraint",
+        "data": [
+          {
+            "name": "hardware",
+            "color": "#218B43",
+            "href": "http://google.com"
+          },
+          {
+            "name": "firmware",
+            "color": "#FFFC01",
+            "href": "http://google.com"
+          },
+          {
+            "name": "software",
+            "color": "#EF0601",
+            "pulse": true,
+            "href": "/Report/Constraint"
+          },
+          {
+            "name": "product-genesis",
+            "color": "#61FA92",
+            "href": "http://google.com"
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "text": "Internal",
+        "title": "Defect MTTR",
+        "state": "down",
+        "topColor": "#FFFB00",
+        "bottomColor": "#C7BA37",
+        "extraClass": "label-extra-class",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "text": "Test",
+        "title": "Pass/Fail",
+        "state": "up",
+        "topColor": "#EF0601",
+        "bottomColor": "#FD5551",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "pulse": true,
+        "href": "http://google.com"
+      },
+      {
+        "text": "Defect",
+        "title": "Type",
+        "completed": true,
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "text": "Defect",
+        "title": "arrival",
+        "state": "down",
+        "topColor": "#C7BA37",
+        "bottomColor": "#FFEA5D",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "text": "Feature",
+        "title": "Completion %",
+        "state": "up",
+        "topColor": "#EF0601",
+        "bottomColor": "#FD5552",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "pulse": true,
+        "href": "http://google.com"
+      },
+      {
+        "text": "Customer",
+        "title": "Defect Closure",
+        "state": "down",
+        "topColor": "#C9BA38",
+        "bottomColor": "#FFEB5C",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "text": "Customer",
+        "title": "Defect MTTR",
+        "bottomColor": "#63F992",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "text": "User Story",
+        "title": "completion",
+        "topColor": "#FFFC01",
+        "bottomColor": "#C7BA37",
+        "state": "down",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "text": "Feature",
+        "title": "Comprehension",
+        "state": "up",
+        "topColor": "#218B43",
+        "bottomColor": "#61FA92",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "title": "Burndown",
+        "state": "down",
+        "topColor": "#C7BA37",
+        "bottomColor": "#FFFC01",
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "title": "Capacity",
+        "state": "down",
+        "topColor": "#00EC32",
+        "bottomColor": "#218B43",
+        "completed": false,
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "href": "http://google.com"
+      },
+      {
+        "title": "Velocity",
+        "state": "up",
+        "topColor": "#EE0500",
+        "bottomColor": "#FD5552",
+        "completed": false,
+        "tooltip": [
+          {
+            "title": "Update",
+            "text": "10/25/2015"
+          },
+          {
+            "title": "Due",
+            "text": "11/02/2015"
+          }
+        ],
+        "pulse": true,
+        "href": "http://google.com"
+      }
+    ]
+  }
+}

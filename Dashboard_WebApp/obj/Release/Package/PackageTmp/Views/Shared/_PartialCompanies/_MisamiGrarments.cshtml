@@ -1,0 +1,18 @@
+﻿
+<div class="tarasima">
+    <span class="ng-scope bold">
+        Division <i class="glyphicon glyphicon-forward"></i>
+    </span>
+    <span ng-repeat="d in _divisions | orderBy : 'DivisionName'"  class="ng-scope">
+        <h2 class="glyphicon ng-binding" style="width: 31.25%;">
+            <span class="bold ng-binding" ng-model="division" ng-click="divisionset(alert('hi'))"> {{d.DivisionName}} &nbsp;</span>
+            <span class="pull-right">
+                <span class="goldenrod"><i class="glyphicon glyphicon-briefcase"></i> {{d.DivisionTotal}}</span>
+                <span class="rosybrown"><i class="glyphicon glyphicon-ok"></i> {{d.DivisionTotal}} </span>
+                <span class="yellowgreen"><i class="glyphicon glyphicon-minus"></i> 00 </span>
+                <span class="blueviolet"><i class="glyphicon glyphicon-plus"></i>00</span>
+            </span>
+        </h2>
+        @Html.Partial("_PartialCompanies/_TarasimaUnits_Final")
+    </span>
+</div>

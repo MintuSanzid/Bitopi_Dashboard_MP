@@ -1,0 +1,25 @@
+﻿
+
+<div class="">
+
+    <span data-ng-repeat="_value in _ValueMetrics">
+        <h2 class="glyphicon"> {{_value.name}}</h2>
+        <div class="">
+            <span data-ng-repeat="act in activities">
+                <h3 class="glyphicon glyphicon-plus">
+                    <input id="_value_{{_value.key}}_{{act}}" type="checkbox" name="producttype" value="{{act}}" onclick="change(this)"/> {{act}}
+                </h3>
+                <p>
+                    <span data-ng-repeat="pri in priorities">
+                        <input id="_value_{{_value.key}}_{{act}}_{{pri}}" name="_value_{{_value.key}}_{{act}}" type="radio" value="{{pri}}" onchange="changeRB(this)" /> <span> {{pri}} </span><br />
+                    </span>
+                </p>
+            </span>
+
+            <span >
+                <h3 class="glyphicon glyphicon-plus ng-binding"> <input id="_value_{{_value.key}}_Thumbnail" type="checkbox" name="producttype" value="Thumbnail" ng-click="changeValueThumbnail(this)"> Thumbnail </h3>
+                <p> Enable or disable to checkbox checked </p>
+            </span>
+        </div>
+    </span>
+</div>

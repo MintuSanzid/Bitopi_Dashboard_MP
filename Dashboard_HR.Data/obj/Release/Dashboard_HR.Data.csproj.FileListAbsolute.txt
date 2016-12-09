@@ -1,0 +1,10 @@
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\Dashboard_HR.Data.dll.config
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\Dashboard_HR.Data.dll
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\Dashboard_HR.Data.pdb
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\DashboardHR.Models.dll
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\Dashboard_HR.Repository.dll
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\DashboardHR.Models.pdb
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\bin\Release\Dashboard_HR.Repository.pdb
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\obj\Release\Dashboard_HR.Data.csprojResolveAssemblyReference.cache
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\obj\Release\Dashboard_HR.Data.dll
+E:\Dashboard_HR_GitHub\Dashboard_HR.Data\obj\Release\Dashboard_HR.Data.pdb

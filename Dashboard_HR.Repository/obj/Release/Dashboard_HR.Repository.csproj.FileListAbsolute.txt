@@ -1,0 +1,6 @@
+E:\Dashboard_HR_GitHub\Dashboard_HR.Repository\bin\Release\Dashboard_HR.Repository.dll.config
+E:\Dashboard_HR_GitHub\Dashboard_HR.Repository\bin\Release\Dashboard_HR.Repository.dll
+E:\Dashboard_HR_GitHub\Dashboard_HR.Repository\bin\Release\Dashboard_HR.Repository.pdb
+E:\Dashboard_HR_GitHub\Dashboard_HR.Repository\obj\Release\Dashboard_HR.Repository.csprojResolveAssemblyReference.cache
+E:\Dashboard_HR_GitHub\Dashboard_HR.Repository\obj\Release\Dashboard_HR.Repository.dll
+E:\Dashboard_HR_GitHub\Dashboard_HR.Repository\obj\Release\Dashboard_HR.Repository.pdb

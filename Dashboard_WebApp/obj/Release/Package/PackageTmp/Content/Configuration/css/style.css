@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+}
+
+label {
+    padding: 5px 0px 0px 0px;
+}
+
+.accordion {
+    /*width: 50%;*/
+    margin: 20px auto;
+    border-radius: 10px 10px 10px 10px;
+    /*border-bottom: 1px solid #5685AB;*/
+}
+
+    .accordion h1, h2, h3, h4, h5, h6 {
+        cursor: pointer;
+        color: #D6D8E0;
+    }
+
+    .accordion h2, h3, h4, h5 {
+        font-family: "Rajdhani";
+        font: 16px / 1.5 "Rajdhani", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+        color: #D6D8E0;
+    }
+
+    .accordion h1 {
+        padding: 15px 20px;
+        background-color: #5685AB;
+        font-family: "Rajdhani";
+        font: 16px / 0.5 "Rajdhani", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+        font-size: 2.0rem;
+        font-weight: normal;
+        color: #D6D8E0;
+    }
+
+        .accordion h1:hover {
+            color: #D6D8E0;
+        }
+
+        .accordion h1:first-child {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .accordion h1:last-of-type {
+            border-left: 1px solid #5685AB;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .accordion h1:not(:last-of-type) {
+            border-bottom: 1px solid #5685AB;
+        }
+
+    .accordion h2 {
+        border-radius: 0 0 10px 10px;
+        border-bottom: 1px solid #5685AB;
+    }
+    /*.accordion h2:last-of-type {
+        border-radius: 0 0 10px 10px;
+        border-bottom: 1px solid #5685AB;
+    }*/
+
+    .accordion div, .accordion p {
+        display: none;
+    }
+    /*.accordion section {
+        display: block;
+    }*/
+
+    .accordion h2 {
+        padding: 8px;
+        background-color: rgb(39, 61, 84);
+        font-size: 1.3rem;
+        color: #D6D8E0;
+        border-left: 1px solid #5685AB;
+        border-right: 1px solid #5685AB;
+    }
+
+        .accordion h2:hover {
+            background-color: rgba(44, 70, 94, 0.3);
+        }
+
+    .accordion h3 {
+        padding: 5px;
+        background-color: #428bca;
+        font-size: 1.3rem;
+        color: #D6D8E0;
+        border-left: 1px solid #5685AB;
+        border-right: 1px solid #5685AB;
+        border-radius: 0 0 8px 8px;
+    }
+
+        .accordion h3:hover {
+            background-color: rgb(22, 36, 47);
+        }
+
+    .accordion h4 {
+        margin-bottom: 7px;
+        padding: 5px;
+        background-color: #5ab3ff;
+        font-size: 1.2rem;
+        color: #D6D8E0;
+        border-left: 1px solid #5685AB;
+        border-right: 1px solid #5685AB;
+        border-radius: 0 0 8px 8px;
+    }
+
+        .accordion h4:hover {
+            background-color: rgb(22, 36, 47);
+            color: #ddd;
+        }
+
+    .accordion h5 {
+        padding: 5px;
+        background-color: #04a79f;
+        font-size: 1.2rem;
+        color: rgb(25, 126, 133);
+        color: #D6D8E0;
+        border-radius: 0 0 8px 8px;
+    }
+
+        .accordion h5:hover {
+            background-color: rgb(22, 36, 47);
+        }
+
+    .accordion h6 {
+        margin-bottom: 7px;
+        padding: 5px;
+        background-color: #25848e;
+        font-size: 1.2rem;
+        color: rgb(25, 126, 133);
+        color: #D6D8E0;
+        border-radius: 0 0 8px 8px;
+    }
+
+        .accordion h6:hover {
+            background-color: rgb(22, 36, 47);
+        }
+
+    .accordion h7 {
+        margin-bottom: 7px;
+        padding: 5px;
+        background-color: #15545a;
+        font-size: 1.2rem;
+        color: rgb(25, 126, 133);
+        color: #ddd;
+    }
+
+        .accordion h7:hover {
+            background-color: rgb(22, 36, 47);
+        }
+
+
+
+    .accordion p {
+        padding: 35px 15px;
+        /*background-color: #ddd;*/
+        background-color: rgb(255, 255, 255);
+        font-family: "Georgia";
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.3rem;
+    }
+
+    .accordion .opened-for-codepen {
+        display: block;
+    }
+
+.fixed-height {
+    height: 30%;
+}
+
+.row-table {
+    margin: 10px;
+    border: solid;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.glyphicon.glyphicon-ok {
+    font-size: 13px;
+}
+
+.glyphicon.glyphicon-briefcase {
+    font-size: 13px;
+}
+
+.glyphicon.glyphicon-minus {
+    font-size: 13px;
+}
+
+.glyphicon.glyphicon-plus {
+    font-size: 15px;
+}
+
+.rosybrown {
+    background-color: #000000;
+    padding: 5px;
+    /*border-radius: 8px;*/
+    font-size: 15px;
+    color: #d6d8e0;
+    margin: 0px 5px 0px 0px;
+}
+
+    /*.rosybrown:hover {
+        background-color: #800080;
+        color: #ddd;
+        padding: 3px;
+        border-radius: 8px;
+        font-size: 15px;
+    }*/
+
+
+.goldenrod {
+    background-color: #008000;
+    padding: 5px;
+    /*border-radius: 8px;*/
+    font-size: 15px;
+    color: #d6d8e0;
+    margin: 0px 5px 0px 0px;
+}
+
+    /*.goldenrod:hover {
+        background-color: #800080;
+        color: #ddd;
+        padding: 3px;
+        border-radius: 8px;
+        font-size: 15px;
+    }*/
+
+
+.yellowgreen {
+    background-color: #919191;
+    padding: 5px;
+    /*border-radius: 8px;*/
+    font-size: 15px;
+    color: #fff;
+    margin: 0px 5px 0px 0px;
+}
+
+    /*.yellowgreen:hover {
+        background-color: #800080;
+        padding: 3px;
+        border-radius: 8px;
+        font-size: 15px;
+        color: #fff;
+    }*/
+
+
+.blueviolet {
+    background-color: #800000;
+    padding: 5px;
+    /*border-radius: 8px;*/
+    font-size: 15px;
+    color: #d6d8e0;
+    margin: 0px 5px 0px 0px;
+}
+
+    /*.blueviolet:hover {
+        background-color: #800080;
+        color: #ddd;
+        padding: 3px;
+        border-radius: 8px;
+        font-size: 15px;
+    }*/
+
+.red {
+    background-color: #00008b; 
+    padding: 5px;
+    /*border-radius: 8px;*/
+    font-size: 15px;
+    color: #d6d8e0;
+    margin: 0px 5px 0px 0px;
+}
+
+/*.blueviolet:hover {
+    background-color: #800080;
+    color: #ddd;
+        padding: 3px;
+        border-radius: 8px;
+        font-size: 15px;
+}*/
+
+.small {
+    padding: 3px 3px 8px 3px;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.border-tag {
+    border: solid;
+    border-width: 1px;
+    color: #566f87;
+    padding-left: 15px;
+}

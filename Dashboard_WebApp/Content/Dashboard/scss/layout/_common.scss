@@ -1,0 +1,223 @@
+#wrapper {
+  height:100%;
+  display:table;
+  table-layout:fixed;
+  width:100%;
+  background-image:url(../images/bg-body.jpg);
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+#main{
+  padding:9px 0 25px;
+}
+
+.container{
+  @extend %clearfix;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1270px;
+  padding: 0 10px;
+}
+
+.w1{
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+}
+
+// js styles
+body.chart-page {
+   font-weight: 400 !important;
+}
+.titles-group {
+  font-weight:500;
+}
+.custom-labels-group .text{
+  font-weight:400 !important;
+}
+.main-chart {
+  font-size:18px;
+  line-height:1.2;
+  font-weight:500;
+  text-align:center;
+  padding:0 10px;
+
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .label {
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  }
+  .clickable-item {
+    cursor: pointer;
+  }
+  .labels-group,
+  .titles-group,
+  .section-labels-group,
+  .custom-labels-group,
+  .chart-labels-group {
+    -ms-transform: translate3d(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s .2s, visibility .5s .2s;
+  }
+  &.js-sectors-shown .labels-group,
+  &.js-sectors-shown .titles-group,
+  &.js-sectors-shown .section-labels-group,
+  &.js-sectors-shown .custom-labels-group,
+  &.js-sectors-shown .chart-labels-group {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .labels-group {
+    .label {
+      .label-tooltip {
+       visibility: hidden;
+      }
+      &.hover {
+        .label-tooltip {
+         visibility: visible;
+        }
+      }
+      .label-title {
+        font-weight: bold;
+        fill: #fff;
+      }
+    }
+  }
+
+  .custom-label{
+    font-size:30px;
+    line-height:1.2;
+  }
+
+  .titles-group{
+    font-size:20px;
+    line-height:1.2;
+    letter-spacing:1px;
+  }
+
+  .custom-labels-group {
+    font-size: 25px;
+    fill: #fff;
+  }
+
+  .section-labels-group {
+    text {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+
+  .chart-labels-group{
+    font-size:60px;
+    line-height:1.2;
+  }
+
+  .sector-label{
+    font-size:35px;
+    line-height:1.2;
+    font-weight:500;
+    letter-spacing:2px;
+    fill: #E5E5EF;
+  }
+  .custom-label {
+    text {
+      fill: #E2E4EE;
+    }
+    .title {
+      font-weight: bold;
+    }
+  }
+  .chart-labels-group .title,
+  .label-tooltip-title,
+  .label-title {
+    font-weight: 600;
+  }
+  .text-group{
+    .text{
+      font-weight:300;
+    }
+  }
+}
+
+.sector-label{
+  circle{
+    fill:#2c445a;
+  }
+}
+.chart-labels-group{
+  circle{
+    fill:#2c445a;
+  }
+}
+.chart-label-group{
+  circle{
+    fill:#2c445a;
+  }
+}
+.custom-label{
+  circle{
+    fill:#526c84;
+  }
+}
+
+.line-chart {
+  padding:0 10px;
+  svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .chart-label-group{
+    font-size:60px;
+    line-height:1.2;
+    font-weight: bold;
+  }
+
+  .label {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-weight:500;
+    text-transform: uppercase;
+    polygon{
+      opacity:.4;
+    }
+  }
+
+  .text-group{
+    font-weight:600;
+  }
+
+  .label-text{
+    letter-spacing:1px;
+  }
+}
+
+
+.label-tooltip{
+  box-shadow:5px 0 20px 0 rgba(0, 0, 0, 0.9);
+}
+
+.tooltip-bg {
+  polygon{
+    fill:#25384e;
+    opacity:.8;
+    stroke:#6286a7;
+  }
+}
+
+.label-arrow{
+  fill:#eff3f8;
+}

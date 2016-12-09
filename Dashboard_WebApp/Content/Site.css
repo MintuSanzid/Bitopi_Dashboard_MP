@@ -1,0 +1,164 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-conten-Report {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 90%;
+}
+
+select {
+    height: 35px;
+}
+
+.btn-info-agile {
+    color: #ffffff;
+    background-color: #44678D;
+    /*border-color: rgba(51, 153, 255, 0.84);*/
+    border-radius: 3px;
+    margin: 5px;
+}
+
+
+    .btn-info:hover,
+    .btn-info:focus,
+    .btn-info:active,
+    .btn-info.active,
+    .btn-info-agile:focus,
+    .btn-info-agile:hover,
+    .open .dropdown-toggle.btn-info {
+        color: #ffffff;
+        background-color: #2A4258;
+        border-color: rgba(212, 232, 253, 0.36);
+        margin-bottom: 5px;
+    }
+
+
+.btn-info-on {
+    color: #ffffff;
+    background-color: #BAD36B;
+    border-color: #BAD36B;
+    border-radius: 18px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+.btn-info-off {
+    color: #ffffff;
+    background-color: #C1C1C1;
+    border-color: #BCBCBC;
+    border-radius: 18px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+#textarea {
+    max-width: 100%;
+}
+
+.white {
+    background-color: #fff;
+    color: #000000;
+    /*display: none;*/
+}
+
+.white-row {
+    background-color: #fff;
+    /*color: #000000;*/
+    margin: 5px;
+    padding: 5px;
+    position: static;
+}
+
+ng-color-picker ul {
+    padding: 3px;
+    margin: 0;
+}
+
+ng-color-picker li {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+    ng-color-picker li.selected {
+        border: 1px solid #333;
+    }
+
+.row {
+    /*background-color: #000000;*/
+    padding-bottom: 5px;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    /*margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;*/
+}
+
+.insert-off {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 100px;
+    text-shadow: 0 1px 0 #666;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px #000;
+    background: #707070;
+    opacity: 0.95;
+}
+
+.insert-on {
+    display: block;
+    color: #eee;
+    text-shadow: 0 0 1px #666;
+    text-decoration: none;
+    box-shadow: 1px 1px 2px #000;
+    opacity: 0.95;
+    margin-left: 35px;
+    background-color: #698610;
+}
+
+.dummy-off {
+    display: none;
+}
+
+.dummy-on {
+    display: block;
+}
+
+.btn-info-bitopi {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    margin: 5px;
+}
